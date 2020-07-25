@@ -99,8 +99,12 @@ async def on_message(message):
         await message.channel.send(
             'Available Commands\n' +
             '1: ' + SPECIAL + 'help\n' +
+            '2: ' + SPECIAL +'me\n'+
+            '3: ' + SPECIAL +'addEvent\n'+
             'And thats about it champ'
         )
+    elif message.content.startswith(SPECIAL + 'me'):
+        await message.channel.send('https://github.com/MattBelanger321/DiscordCalendar')
     elif message.content.startswith(SPECIAL + 'addEvent'):
         if len(x) != 7:
             await message.channel.send('USAGE: ' + SPECIAL + 'addEvent eventName YYYY MM DD hh mm')
